@@ -1,3 +1,4 @@
+@import url('fonts/fonts.css');
 /* Указываем box sizing */
 *,
 *::before,
@@ -32,7 +33,7 @@ dd {
 /* Выставляем основные настройки по-умолчанию для body */
 body {
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat-Regular', sans-serif;
   font-size: 15px;
   line-height: 1.6;
   color: #333;
@@ -66,4 +67,92 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+//Верстка
+.container{
+  width: 100%;
+  max-width: 1290px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.header-top{
+  height: 50px;
+  background-color: #F7EBE5;
+
+  display: flex;
+  align-items: center;
+}
+.header-top__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-top__item{
+  display: flex;
+}
+.nav-info {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000000;
+
+  &:not(:first-child) {
+    margin-left: 16px;
+  }
+}
+#city-select {
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+  background-color: #F7EBE5;
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+
+select:focus {
+  border-color: #007bff;
+  background-color: #FFFFFF;
+}
+.icon__head{
+  width: 20px;
+  height: 20px;
+}
+.social-items{
+  display: flex;
+  gap: 15px;
+}
+
+.header-bottom__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  & p, select{
+    text-transform: uppercase;
+  }
+  & select{
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+}
+
+.header-bottom__item{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  & span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    width: 30px;
+    height: 30px;
+    background-color: #E7426A;
+    border-radius: 50%;
+  }
 }
